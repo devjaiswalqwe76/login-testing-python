@@ -54,3 +54,34 @@ Setup Instructions
 bash
 git clone https://github.com/devjaiswalqwe76/login-testing-python.git
 cd login-testing-python
+
+
+## 🛒 Cart Functionality Testing with Python + Selenium
+
+This module tests the "Add to Cart" feature on a demo e-commerce site, ensuring that products can be added successfully. The script uses Selenium for browser automation and OpenPyXL for Excel-based result tracking, mimicking real-world QA workflows.
+
+---
+
+### ✅ Features
+
+- Adds product to cart using precise element locators
+- Smart waiting with `WebDriverWait` for stable test execution
+- Asserts presence of confirmation message
+- Logs Pass/Fail result in `cart_test_report.xlsx`
+- Screenshot optional for cart popup or browser state
+
+---
+
+### 🧪 Technologies Used
+
+- `Python 3.11+`
+- `Selenium WebDriver` – browser control
+- `OpenPyXL` – Excel report logging
+- `WebDriverWait` – reliable element detection
+- `ChromeDriver` – launching Chrome browser
+
+
+#How to Run
+
+```bash
+python cart_test.py
