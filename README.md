@@ -85,3 +85,40 @@ This module tests the "Add to Cart" feature on a demo e-commerce site, ensuring 
 
 ```bash
 python cart_test.py
+
+
+## 🧾 SauceDemo Checkout Functionality Test with Python + Selenium
+
+This module performs an end-to-end checkout test on [SauceDemo](https://www.saucedemo.com/), simulating a user flow from login to purchase confirmation. It includes structured step logging, screenshot pauses, and Excel-based result tracking—ideal for showcasing real-world QA workflows.
+
+---
+
+### ✅ Features
+
+- Automates full checkout flow:
+  - Login
+  - Add product to cart
+  - Checkout (User Info, Overview, Confirmation)
+- Logs each step in terminal for visibility
+- Asserts final confirmation message: `"Thank you for your order!"`
+- Records Pass/Fail status in Excel
+- Saves report as `saucedemo_checkout_report.xlsx` for manual-style tracking
+
+---
+
+### 🛠️ Tools Used
+
+| Tool             | Purpose                         |
+|------------------|----------------------------------|
+| Python (3.11+)   | Core scripting language          |
+| Selenium         | Browser automation               |
+| `WebDriverWait`  | Stable interaction handling      |
+| OpenPyXL         | Excel report generation          |
+| ChromeDriver     | Launch Chrome for tests          |
+
+---
+
+### ▶️ How to Run
+
+```bash
+python checkout_test.py
