@@ -122,3 +122,47 @@ This module performs an end-to-end checkout test on [SauceDemo](https://www.sauc
 
 ```bash
 python checkout_test.py
+
+
+# 🧪 Login Testing with Selenium + PyTest
+
+Automated testing project built with **Python**, **Selenium WebDriver**, and **PyTest** — demonstrating login validation across multiple input scenarios using `@pytest.mark.parametrize`. Designed for clean execution, modular structure, and scalable reporting.
+
+---
+
+## 📍 Demo Site
+
+Testing is performed on [The Internet HerokuApp – Login Page](https://the-internet.herokuapp.com/login), a reliable public demo for automation workflows.
+
+---
+
+## ✅ Features
+
+- 🔐 **Login flow validation** using Selenium
+- 🧬 **Parametrize-based test cases** for multiple input combinations
+- 🛠️ Modular helpers in `utils/`
+- 🌐 Browser automation via `ChromeDriver`
+- 📦 Managed using `PyTest` fixtures from `conftest.py`
+- 🖼️ Error screenshots (optional) and HTML reporting support
+
+---
+
+## 🗂️ Project Structure
+
+
+---
+
+## 🔍 Parametrize Logic
+
+```python
+@pytest.mark.parametrize("username,password,expected", [
+    ("tomsmith", "SuperSecretPassword!", True),
+    ("wronguser", "SuperSecretPassword!", False),
+    ("tomsmith", "wrongpass", False),
+    ("", "", False),
+    ("admin", "admin123", False)
+])
+def test_login_parametrize(driver, username, password, expected):
+    result = login_to_site(driver, username, password)
+    assert result == expected
+
